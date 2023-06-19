@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bukti Pembayaran</title>
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        font-size: 1rem;
+        line-height: 0.75rem; 
+        height: 100vh;
+      }
+      .container {
+        padding: 4rem 4rem 4rem 4rem;
+      }
+      .font-semibold {
+        font-weight: 600;
+      }
+      .success-payment {
+        font-weight: 600;
+        font-size: 20px;
+      }
+      .line {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        color: lightgray;
+      }
+      .dash-line {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        color: lightgray;
+        border-style: dashed;
+        border-width: 1px;
+      }
+      .row-section {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+      }
+      .space-between {
+        justify-content: space-between;
+      }
+      .sub-information {
+        width: 50%;
+      }
+      .company-logo {
+        width: auto;
+        height: 20px;
+      }
+      .logo {
+        width: 20px;
+        height: 20px;
+        margin-right: 0.5rem;
+      }
+      .green-color {
+        color: green;
+      }
+      .items-center {
+        align-items: center;
+      }
+      .contact-us-wrapper {
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+      class="company-logo"
+        src="data:image/png;base64,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"
+        alt="Logo Perusahaan" />
+      <p class>Hai, <span class="font-semibold">Nia Fitriana</span></p>
+      <p class="success-payment">Terimakasih atas pembayaran Anda</p>
+      <p class>
+        Kami telah menerima pembayaran Anda! Berikut detail pembayarannya:
+      </p>
+      <div class="line">
+        <hr />
+      </div>
+      <div class="row-section">
+        <div class="sub-information">
+          <p class="font-semibold">Informasi Pelanggan</p>
+          <p>Nia Fitriana</p>
+          <p>test@gmail.com</p>
+        </div>
+        <div class="sub-information">
+          <p class="font-semibold">Informasi Pesanan</p>
+          <p>Order Id: KJ09839235</p>
+          <p>Waktu Pemesanan: 19 Juni 2023, 17.55 WIB</p>
+        </div>
+      </div>
+      <div class="line">
+        <hr />
+      </div>
+      <p class="font-semibold">Informasi Pembayaran</p>
+      <p>Metode Pembayaran: Bank Transfer Mandiri (Virtual Account)</p>
+      <p>Waktu Pembayaran: 19 Juni 2023, 18.21 WIB</p>
+      <div class="line">
+        <hr />
+      </div>
+      <p class="font-semibold">Rincian Pesanan</p>
+      <div class="row-section space-between">
+        <p>1 Paket langganan advance (50 slot)</p>
+        <p>Rp9.150.000,-</p>
+      </div>
+      <div class="dash-line"></div>
+      <div class="row-section space-between green-color font-semibold">
+        <p>Total</p>
+        <p>Rp9.150.000,-</p>
+      </div>
+      <div class="row-section space-between contact-us-wrapper">
+        <div>
+          <p>Temukan Kami Di</p>
+          <div class="row-section">
+            <img src="https://www.pngfind.com/pngs/m/2-23339_black-and-white-instagram-logo-instagram-logo-2018.png" class="logo" alt="Instagram logo">
+            <img src="https://w7.pngwing.com/pngs/1012/692/png-transparent-computer-icons-linkedin-social-media-social-media-text-rectangle-logo.png" class="logo" alt="linkedin logo">
+          </div>
+        </div>
+        <div>
+          <p>Customer support Perveks:</p>
+          <div class="row-section items-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/563/563634.png" class="logo" alt="whatsapp logo" />
+            <p>+621-412-124 (Senin - Jumat)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
